@@ -1,0 +1,498 @@
+\hypertarget{array_8h}{}\section{src/array.h File Reference}
+\label{array_8h}\index{src/array.\+h@{src/array.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{array_8h_ac328e551bde3d39b6d7b8cc9e048d941}{Z\+E\+R\+O}~0
+\item 
+\#define \hyperlink{array_8h_a206b6f5362e56b51ca957635350b70b6}{O\+N\+E}~1
+\item 
+\#define \hyperlink{array_8h_a888e15353eb3d330c743dbdeb47117e2}{T\+W\+O}~2
+\item 
+\#define \hyperlink{array_8h_a7a9a231e30b47bc0345749c8bd1e5077}{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}~20
+\item 
+\#define \hyperlink{array_8h_a0a5be2a08afbec84534eaa1c9af70919}{M\+A\+X\+\_\+\+E\+L\+E\+M\+E\+N\+T}~15
+\item 
+\#define \hyperlink{array_8h_a7b99dc1e1c86b4897498c2d436ead1b5}{N\+E\+W\+\_\+\+L\+I\+N\+E}~\char`\"{}\textbackslash{}n\char`\"{}
+\item 
+\#define \hyperlink{array_8h_af6b06fa3c67e5771c85d2154283a45f9}{G\+E\+N\+E\+R\+A\+T\+E\+D\+\_\+\+A\+R\+R\+A\+Y}~\char`\"{}Array generato\+: \char`\"{}
+\item 
+\#define \hyperlink{array_8h_acb137c601e2dd1fd877401046e492fb6}{O\+R\+D\+E\+R\+E\+D\+\_\+\+A\+R\+R\+A\+Y}~\char`\"{}Array ordinato\+: \char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{array_8h_a37406669812e75c559cfa401d0c2f623}{srand\+\_\+time} ()
+\item 
+int \hyperlink{array_8h_a3c2599d8a3a55b77fa04be4552085c60}{generate\+\_\+length} ()
+\item 
+int $\ast$ \hyperlink{array_8h_a753adf0d0ece5dc23d83580db61ecfad}{generate\+\_\+array} (int length)
+\item 
+void \hyperlink{array_8h_ad76d9bd28c1c7292150d86a0ef11cd26}{print\+\_\+array} (char $\ast$message, int $\ast$array, int length)
+\item 
+float \hyperlink{array_8h_a7a75caed3c8efc1fff5636b82027a789}{mean} (int $\ast$array, int length)
+\item 
+void \hyperlink{array_8h_a51c01c7f8ca8b1cfe272c1326183dc3e}{print\+\_\+mean} (int $\ast$array, int length)
+\item 
+bool \hyperlink{array_8h_abe2f945e1b09d1c54bb2774687f61607}{ordered\+\_\+array} (int $\ast$array, int length)
+\item 
+void \hyperlink{array_8h_ad8a1f8eeabb3cb4834a2e364daaa427d}{bubble\+\_\+sort} (int $\ast$array, int length)
+\item 
+int \hyperlink{array_8h_a8b522d30dec7362ebf4ba5684e5ddaed}{median} (int $\ast$array, int length)
+\item 
+void \hyperlink{array_8h_a546fb7bfc66c210fbdcda43de24d6ac4}{print\+\_\+median} (int $\ast$array, int length)
+\item 
+int \hyperlink{array_8h_acb33506e81f43223fc7263bd79a2dd24}{generate\+\_\+number} ()
+\item 
+void \hyperlink{array_8h_a5fae1d2a548c84f2cb20be98d9b576a4}{print\+\_\+number} (int number)
+\item 
+bool \hyperlink{array_8h_a2d4cb3efd82e4aba13747a361f48c5d7}{linear\+\_\+search} (int $\ast$array, int length, int number)
+\item 
+void \hyperlink{array_8h_af4db866bf42d1f6a68dc7512b5025da2}{print\+\_\+search\+\_\+result} (int $\ast$array, int length, int number)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{array_8h_af6b06fa3c67e5771c85d2154283a45f9}{}\index{array.\+h@{array.\+h}!G\+E\+N\+E\+R\+A\+T\+E\+D\+\_\+\+A\+R\+R\+A\+Y@{G\+E\+N\+E\+R\+A\+T\+E\+D\+\_\+\+A\+R\+R\+A\+Y}}
+\index{G\+E\+N\+E\+R\+A\+T\+E\+D\+\_\+\+A\+R\+R\+A\+Y@{G\+E\+N\+E\+R\+A\+T\+E\+D\+\_\+\+A\+R\+R\+A\+Y}!array.\+h@{array.\+h}}
+\subsubsection[{G\+E\+N\+E\+R\+A\+T\+E\+D\+\_\+\+A\+R\+R\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N\+E\+R\+A\+T\+E\+D\+\_\+\+A\+R\+R\+A\+Y~\char`\"{}Array generato\+: \char`\"{}}\label{array_8h_af6b06fa3c67e5771c85d2154283a45f9}
+
+
+Definition at line 23 of file array.\+h.
+
+\hypertarget{array_8h_a0a5be2a08afbec84534eaa1c9af70919}{}\index{array.\+h@{array.\+h}!M\+A\+X\+\_\+\+E\+L\+E\+M\+E\+N\+T@{M\+A\+X\+\_\+\+E\+L\+E\+M\+E\+N\+T}}
+\index{M\+A\+X\+\_\+\+E\+L\+E\+M\+E\+N\+T@{M\+A\+X\+\_\+\+E\+L\+E\+M\+E\+N\+T}!array.\+h@{array.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+E\+L\+E\+M\+E\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+E\+L\+E\+M\+E\+N\+T~15}\label{array_8h_a0a5be2a08afbec84534eaa1c9af70919}
+
+
+Definition at line 21 of file array.\+h.
+
+
+
+Referenced by generate\+\_\+number().
+
+\hypertarget{array_8h_a7a9a231e30b47bc0345749c8bd1e5077}{}\index{array.\+h@{array.\+h}!M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H@{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H@{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}!array.\+h@{array.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H~20}\label{array_8h_a7a9a231e30b47bc0345749c8bd1e5077}
+
+
+Definition at line 20 of file array.\+h.
+
+
+
+Referenced by generate\+\_\+length().
+
+\hypertarget{array_8h_a7b99dc1e1c86b4897498c2d436ead1b5}{}\index{array.\+h@{array.\+h}!N\+E\+W\+\_\+\+L\+I\+N\+E@{N\+E\+W\+\_\+\+L\+I\+N\+E}}
+\index{N\+E\+W\+\_\+\+L\+I\+N\+E@{N\+E\+W\+\_\+\+L\+I\+N\+E}!array.\+h@{array.\+h}}
+\subsubsection[{N\+E\+W\+\_\+\+L\+I\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+E\+W\+\_\+\+L\+I\+N\+E~\char`\"{}\textbackslash{}n\char`\"{}}\label{array_8h_a7b99dc1e1c86b4897498c2d436ead1b5}
+
+
+Definition at line 22 of file array.\+h.
+
+
+
+Referenced by print\+\_\+array(), print\+\_\+mean(), print\+\_\+median(), and print\+\_\+search\+\_\+result().
+
+\hypertarget{array_8h_a206b6f5362e56b51ca957635350b70b6}{}\index{array.\+h@{array.\+h}!O\+N\+E@{O\+N\+E}}
+\index{O\+N\+E@{O\+N\+E}!array.\+h@{array.\+h}}
+\subsubsection[{O\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+N\+E~1}\label{array_8h_a206b6f5362e56b51ca957635350b70b6}
+
+
+Definition at line 18 of file array.\+h.
+
+
+
+Referenced by binary\+\_\+search(), bubble\+\_\+sort(), ordered\+\_\+array(), and print\+\_\+array().
+
+\hypertarget{array_8h_acb137c601e2dd1fd877401046e492fb6}{}\index{array.\+h@{array.\+h}!O\+R\+D\+E\+R\+E\+D\+\_\+\+A\+R\+R\+A\+Y@{O\+R\+D\+E\+R\+E\+D\+\_\+\+A\+R\+R\+A\+Y}}
+\index{O\+R\+D\+E\+R\+E\+D\+\_\+\+A\+R\+R\+A\+Y@{O\+R\+D\+E\+R\+E\+D\+\_\+\+A\+R\+R\+A\+Y}!array.\+h@{array.\+h}}
+\subsubsection[{O\+R\+D\+E\+R\+E\+D\+\_\+\+A\+R\+R\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+R\+D\+E\+R\+E\+D\+\_\+\+A\+R\+R\+A\+Y~\char`\"{}Array ordinato\+: \char`\"{}}\label{array_8h_acb137c601e2dd1fd877401046e492fb6}
+
+
+Definition at line 24 of file array.\+h.
+
+\hypertarget{array_8h_a888e15353eb3d330c743dbdeb47117e2}{}\index{array.\+h@{array.\+h}!T\+W\+O@{T\+W\+O}}
+\index{T\+W\+O@{T\+W\+O}!array.\+h@{array.\+h}}
+\subsubsection[{T\+W\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O~2}\label{array_8h_a888e15353eb3d330c743dbdeb47117e2}
+
+
+Definition at line 19 of file array.\+h.
+
+
+
+Referenced by binary\+\_\+search(), and median().
+
+\hypertarget{array_8h_ac328e551bde3d39b6d7b8cc9e048d941}{}\index{array.\+h@{array.\+h}!Z\+E\+R\+O@{Z\+E\+R\+O}}
+\index{Z\+E\+R\+O@{Z\+E\+R\+O}!array.\+h@{array.\+h}}
+\subsubsection[{Z\+E\+R\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define Z\+E\+R\+O~0}\label{array_8h_ac328e551bde3d39b6d7b8cc9e048d941}
+
+
+Definition at line 17 of file array.\+h.
+
+
+
+Referenced by binary\+\_\+search(), bubble\+\_\+sort(), generate\+\_\+array(), generate\+\_\+length(), linear\+\_\+search(), mean(), median(), ordered\+\_\+array(), and print\+\_\+array().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{array_8h_ad8a1f8eeabb3cb4834a2e364daaa427d}{}\index{array.\+h@{array.\+h}!bubble\+\_\+sort@{bubble\+\_\+sort}}
+\index{bubble\+\_\+sort@{bubble\+\_\+sort}!array.\+h@{array.\+h}}
+\subsubsection[{bubble\+\_\+sort}]{\setlength{\rightskip}{0pt plus 5cm}void bubble\+\_\+sort (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{array_8h_ad8a1f8eeabb3cb4834a2e364daaa427d}
+Ordina in maniera crescente gli elementi dell\textquotesingle{}array di dimensione stabilita dal parametro length \begin{DoxyPrecond}{Precondition}
+il parametro length deve essere un numero intero maggiore di 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+gli elementi dell\textquotesingle{}array sono ordinati in maniera crescente 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file array.\+c.
+
+
+
+References O\+N\+E, ordered\+\_\+array(), and Z\+E\+R\+O.
+
+\hypertarget{array_8h_a753adf0d0ece5dc23d83580db61ecfad}{}\index{array.\+h@{array.\+h}!generate\+\_\+array@{generate\+\_\+array}}
+\index{generate\+\_\+array@{generate\+\_\+array}!array.\+h@{array.\+h}}
+\subsubsection[{generate\+\_\+array}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ generate\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{array_8h_a753adf0d0ece5dc23d83580db61ecfad}
+Genera in modo casuale gli elementi dell\textquotesingle{}array di dimensione stabilita dal parametro length \begin{DoxyPrecond}{Precondition}
+il parametro length deve essere un numero intero maggiore di 0 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 21 of file array.\+c.
+
+
+
+References generate\+\_\+number(), and Z\+E\+R\+O.
+
+\hypertarget{array_8h_a3c2599d8a3a55b77fa04be4552085c60}{}\index{array.\+h@{array.\+h}!generate\+\_\+length@{generate\+\_\+length}}
+\index{generate\+\_\+length@{generate\+\_\+length}!array.\+h@{array.\+h}}
+\subsubsection[{generate\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}int generate\+\_\+length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{array_8h_a3c2599d8a3a55b77fa04be4552085c60}
+Genera in modo casuale la dimensione dell\textquotesingle{}array \begin{DoxyPostcond}{Postcondition}
+il numero generato deve essere maggiore di 0 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 14 of file array.\+c.
+
+
+
+References M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H, and Z\+E\+R\+O.
+
+\hypertarget{array_8h_acb33506e81f43223fc7263bd79a2dd24}{}\index{array.\+h@{array.\+h}!generate\+\_\+number@{generate\+\_\+number}}
+\index{generate\+\_\+number@{generate\+\_\+number}!array.\+h@{array.\+h}}
+\subsubsection[{generate\+\_\+number}]{\setlength{\rightskip}{0pt plus 5cm}int generate\+\_\+number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{array_8h_acb33506e81f43223fc7263bd79a2dd24}
+Genera in modo casuale il numero da cercare nell\textquotesingle{}array \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 103 of file array.\+c.
+
+
+
+References M\+A\+X\+\_\+\+E\+L\+E\+M\+E\+N\+T.
+
+
+
+Referenced by generate\+\_\+array().
+
+\hypertarget{array_8h_a2d4cb3efd82e4aba13747a361f48c5d7}{}\index{array.\+h@{array.\+h}!linear\+\_\+search@{linear\+\_\+search}}
+\index{linear\+\_\+search@{linear\+\_\+search}!array.\+h@{array.\+h}}
+\subsubsection[{linear\+\_\+search}]{\setlength{\rightskip}{0pt plus 5cm}bool linear\+\_\+search (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{length, }
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}\label{array_8h_a2d4cb3efd82e4aba13747a361f48c5d7}
+Effettua la ricerca lineare del parametro number nell\textquotesingle{}array di lunghezza stabilita dal parametro length \begin{DoxyPrecond}{Precondition}
+il parametro length deve essere un numero intero maggiore di 0 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+{\em number} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 114 of file array.\+c.
+
+
+
+References Z\+E\+R\+O.
+
+
+
+Referenced by print\+\_\+search\+\_\+result().
+
+\hypertarget{array_8h_a7a75caed3c8efc1fff5636b82027a789}{}\index{array.\+h@{array.\+h}!mean@{mean}}
+\index{mean@{mean}!array.\+h@{array.\+h}}
+\subsubsection[{mean}]{\setlength{\rightskip}{0pt plus 5cm}float mean (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{array_8h_a7a75caed3c8efc1fff5636b82027a789}
+Restituisce la media degli elementi dell\textquotesingle{}array di dimensione stabilita dal parametro length \begin{DoxyPrecond}{Precondition}
+il parametro length deve essere un numero intero maggiore di 0 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 44 of file array.\+c.
+
+
+
+References Z\+E\+R\+O.
+
+
+
+Referenced by print\+\_\+mean().
+
+\hypertarget{array_8h_a8b522d30dec7362ebf4ba5684e5ddaed}{}\index{array.\+h@{array.\+h}!median@{median}}
+\index{median@{median}!array.\+h@{array.\+h}}
+\subsubsection[{median}]{\setlength{\rightskip}{0pt plus 5cm}int median (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{array_8h_a8b522d30dec7362ebf4ba5684e5ddaed}
+Restituisce l\textquotesingle{}elemento centrale dell\textquotesingle{}array ordinato di dimensione stabilita dal parametro length \begin{DoxyPrecond}{Precondition}
+il parametro length deve essere un numero intero maggiore di 0 
+
+gli elementi dell\textquotesingle{}array devono essere ordinati in maniera crescente 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 86 of file array.\+c.
+
+
+
+References ordered\+\_\+array(), T\+W\+O, and Z\+E\+R\+O.
+
+
+
+Referenced by print\+\_\+median().
+
+\hypertarget{array_8h_abe2f945e1b09d1c54bb2774687f61607}{}\index{array.\+h@{array.\+h}!ordered\+\_\+array@{ordered\+\_\+array}}
+\index{ordered\+\_\+array@{ordered\+\_\+array}!array.\+h@{array.\+h}}
+\subsubsection[{ordered\+\_\+array}]{\setlength{\rightskip}{0pt plus 5cm}bool ordered\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{array_8h_abe2f945e1b09d1c54bb2774687f61607}
+Verifica che in un array di dimensione stabilita dal parametro length gli elementi siano ordinati in maniera crescente \begin{DoxyPrecond}{Precondition}
+il parametro dim deve essere un numero intero maggiore di 0 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 60 of file array.\+c.
+
+
+
+References O\+N\+E, and Z\+E\+R\+O.
+
+
+
+Referenced by binary\+\_\+search(), bubble\+\_\+sort(), and median().
+
+\hypertarget{array_8h_ad76d9bd28c1c7292150d86a0ef11cd26}{}\index{array.\+h@{array.\+h}!print\+\_\+array@{print\+\_\+array}}
+\index{print\+\_\+array@{print\+\_\+array}!array.\+h@{array.\+h}}
+\subsubsection[{print\+\_\+array}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{message, }
+\item[{int $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{array_8h_ad76d9bd28c1c7292150d86a0ef11cd26}
+Stampa a video gli elementi dell\textquotesingle{}array di dimensione stabilita dal parametro length 
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file array.\+c.
+
+
+
+References N\+E\+W\+\_\+\+L\+I\+N\+E, O\+N\+E, and Z\+E\+R\+O.
+
+\hypertarget{array_8h_a51c01c7f8ca8b1cfe272c1326183dc3e}{}\index{array.\+h@{array.\+h}!print\+\_\+mean@{print\+\_\+mean}}
+\index{print\+\_\+mean@{print\+\_\+mean}!array.\+h@{array.\+h}}
+\subsubsection[{print\+\_\+mean}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+mean (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{array_8h_a51c01c7f8ca8b1cfe272c1326183dc3e}
+Stampa a video la media degli elementi dell\textquotesingle{}array 
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file array.\+c.
+
+
+
+References mean(), and N\+E\+W\+\_\+\+L\+I\+N\+E.
+
+\hypertarget{array_8h_a546fb7bfc66c210fbdcda43de24d6ac4}{}\index{array.\+h@{array.\+h}!print\+\_\+median@{print\+\_\+median}}
+\index{print\+\_\+median@{print\+\_\+median}!array.\+h@{array.\+h}}
+\subsubsection[{print\+\_\+median}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+median (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{array_8h_a546fb7bfc66c210fbdcda43de24d6ac4}
+Stampa a video l\textquotesingle{}elemento mediano dell\textquotesingle{}array ordinato 
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 92 of file array.\+c.
+
+
+
+References median(), and N\+E\+W\+\_\+\+L\+I\+N\+E.
+
+\hypertarget{array_8h_a5fae1d2a548c84f2cb20be98d9b576a4}{}\index{array.\+h@{array.\+h}!print\+\_\+number@{print\+\_\+number}}
+\index{print\+\_\+number@{print\+\_\+number}!array.\+h@{array.\+h}}
+\subsubsection[{print\+\_\+number}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+number (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}\label{array_8h_a5fae1d2a548c84f2cb20be98d9b576a4}
+Stampa a video il numero da cercare nell\textquotesingle{}array 
+\begin{DoxyParams}{Parameters}
+{\em number} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 107 of file array.\+c.
+
+\hypertarget{array_8h_af4db866bf42d1f6a68dc7512b5025da2}{}\index{array.\+h@{array.\+h}!print\+\_\+search\+\_\+result@{print\+\_\+search\+\_\+result}}
+\index{print\+\_\+search\+\_\+result@{print\+\_\+search\+\_\+result}!array.\+h@{array.\+h}}
+\subsubsection[{print\+\_\+search\+\_\+result}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+search\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{array, }
+\item[{int}]{length, }
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}\label{array_8h_af4db866bf42d1f6a68dc7512b5025da2}
+Stampa a video il risultato della ricerca 
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em length} & \\
+\hline
+{\em number} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 151 of file array.\+c.
+
+
+
+References linear\+\_\+search(), and N\+E\+W\+\_\+\+L\+I\+N\+E.
+
+\hypertarget{array_8h_a37406669812e75c559cfa401d0c2f623}{}\index{array.\+h@{array.\+h}!srand\+\_\+time@{srand\+\_\+time}}
+\index{srand\+\_\+time@{srand\+\_\+time}!array.\+h@{array.\+h}}
+\subsubsection[{srand\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}void srand\+\_\+time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{array_8h_a37406669812e75c559cfa401d0c2f623}
+Assicura che ad ogni lancio il programma generi in modo casuale numeri sempre diversi 
+
+Definition at line 10 of file array.\+c.
+
