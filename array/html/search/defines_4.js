@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['two',['TWO',['../array_8h.html#a888e15353eb3d330c743dbdeb47117e2',1,'array.h']]]
+  ['new_5fline',['NEW_LINE',['../array_8h.html#a7b99dc1e1c86b4897498c2d436ead1b5',1,'array.h']]]
 ];
